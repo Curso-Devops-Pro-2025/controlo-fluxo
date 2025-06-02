@@ -1,6 +1,6 @@
 name: Workflow Evento
 on:
-  push:
+  pull_request:
     branches: ["master", "feat/*"]
 jobs:
   teste:
