@@ -1,4 +1,4 @@
-name: Worflow Evento
+name: Workflow Evento
 on:
   workflow_dispatch:
 jobs:
