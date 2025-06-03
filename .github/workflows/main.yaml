@@ -1,4 +1,5 @@
 name: GitHub Actions - Expressions
+run-name: GitHub Actions - Expressions
 on:
   workflow_dispatch:
     inputs:
