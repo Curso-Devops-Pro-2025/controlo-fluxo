@@ -1,4 +1,4 @@
-name: Workflow Schedule
+name: GitHub Actions - Expressions
 on:
   workflow_dispatch:
     inputs:
@@ -9,7 +9,7 @@ on:
       valor_string:
         type: string
         description: string
-        default: "Valor XPTO"
+        default: "Valor Teste"
       valor_boolean:
         type: boolean
         description: string
