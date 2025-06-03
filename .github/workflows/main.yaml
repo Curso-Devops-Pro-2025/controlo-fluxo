@@ -21,8 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Operacao com String"
-        run: echo "${{ github.actor == inputs.valor_string }}"
+        run: echo "${{ github.actor == github.event.inputs.valor_string }}"
       - name: "Operacao com Number"
-        run: echo "${{ inputs.valor_numerico > 20 }}"
+        run: echo "${{ github.event.inputs.valor_numerico > 20 }}"
       - name: "Operacao com Boolean"
-        run: echo "${{ !inputs.valor_boolean }}"
+        run: echo "${{ !github.event.inputs.valor_boolean }}"
