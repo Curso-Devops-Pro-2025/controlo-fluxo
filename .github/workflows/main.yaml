@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Runs in any feature branch"
-        if: ${{ contains(github.ref, 'refs/head/feat/*') }}
+        if: ${{ contains(github.ref, 'refs/head/feat/') }}
         run: echo "Runs in any branch"
       - name: "Runs in any hotfix branch"
-        if: ${{ contains(github.ref, 'refs/head/hotfix/*') }}
+        if: ${{ contains(github.ref, 'refs/head/hotfix/') }}
         run: echo "Runs in any hotfix branch"
