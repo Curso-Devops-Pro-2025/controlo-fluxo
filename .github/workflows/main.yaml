@@ -1,7 +1,6 @@
 name: Workflow Schedule
 on:
-  schedule:
-    - cron: "*/2 * * * *"
+  workflow_dispatch:
 jobs:
   teste:
     permissions: write-all
