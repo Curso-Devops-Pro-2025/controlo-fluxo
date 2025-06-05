@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: "Runs in any feature branch"
         if: ${{ startsWith(github.ref, 'refs/heads/feat/') }}
-        run: echo "Runs in any branch"
+        run: echo "Runs in any feature branch"
       - name: "Runs in any hotfix branch"
         if: ${{ startsWith(github.ref, 'refs/heads/hotfix/') }}
         run: echo "Runs in any hotfix branch"
