@@ -25,4 +25,4 @@ jobs:
       - name: "Operacao com Number"
         run: echo "${{ inputs.valor_numerico > 20 }}"
       - name: "Operacao com Boolean"
-        run: echo "${{ inputs.valor_boolean }}"
+        run: echo "${{ !inputs.valor_boolean }}"
