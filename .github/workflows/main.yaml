@@ -10,3 +10,9 @@ jobs:
     steps:
       - name: "Running on master"
         run: echo "Running command on master"
+  any-branch:
+    name: "Executes in any branch"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Runs in any branch"
+        run: "Runs in any branch"
