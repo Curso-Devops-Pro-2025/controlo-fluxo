@@ -4,7 +4,7 @@ on:
     branches:
 jobs:
   only-master:
-    if: ${{ github.ref == 'refs/head/master' }}
+    if: ${{ github.ref == 'refs/heads/master' }}
     name: "Only executes on maaster branch"
     runs-on: ubuntu-latest
     steps:
@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Runs in any feature branch"
-        if: ${{ startsWith(github.ref, 'refs/head/feat/') }}
+        if: ${{ startsWith(github.ref, 'refs/heads/feat/') }}
         run: echo "Runs in any branch"
       - name: "Runs in any hotfix branch"
-        if: ${{ startsWith(github.ref, 'refs/head/hotfix/') }}
+        if: ${{ startsWith(github.ref, 'refs/heads/hotfix/') }}
         run: echo "Runs in any hotfix branch"
