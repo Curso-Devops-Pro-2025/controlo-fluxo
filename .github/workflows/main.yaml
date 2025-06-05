@@ -4,10 +4,9 @@ on:
     branches:
 jobs:
   only-master:
+    if: ${{ github.ref == 'refs/head/master' }}
     name: "Only executes on maaster branch"
     runs-on: ubuntu-latest
     steps:
-      - name: "Runs in any branch"
-        run: echo "Run in any branch"
       - name: "Running on master"
         run: echo "Running command on master"
