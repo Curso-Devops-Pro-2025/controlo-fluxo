@@ -22,3 +22,6 @@ jobs:
         run: echo "Runs in any hotfix branch"
       - name: "Runs in any branch"
         run: ech "Runs in any branch"
+      - name: "Send error"
+        if: ${{ failure() }}
+        run: echo "Send error"
