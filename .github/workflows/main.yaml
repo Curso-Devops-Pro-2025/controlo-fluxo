@@ -8,5 +8,5 @@ jobs:
     steps:
     - name: Execution of Test Job
       run: |
-        sleep: 120;
+        sleep 120;
         echo "Action executed on job 01"
