@@ -2,6 +2,7 @@ name: Workflow Concurrency
 run-name: Workflow Concurrency ${{ github.run_number }}
 on:
   workflow_dispatch:
+concurrency: pipeline-aula
 jobs:
   execution-flow:
     runs-on: ubuntu-latest
