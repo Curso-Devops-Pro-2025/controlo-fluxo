@@ -1,10 +1,16 @@
-name: Workflow Schedule
+name: Workflow Matriz
 on:
-  workflow_dispatch:
+  push:
 jobs:
-  teste:
-    permissions: write-all
+  fluxo-execucao-01:
     runs-on: ubuntu-latest
     steps:
-      - name: Action de teste
-        run: echo "Action apenas executada em master e features"
+      - name: "Vai falhar"
+        run: l
+  fluxo-execucao-02:
+    runs-on: ubuntu-latest
+    needs: [fluxo-execucao-01]
+    if: ${{ success() || failure() }}
+    steps:
+      - name: "Execucao com sucesso"
+        run: echo "Execucao de fluxo"
