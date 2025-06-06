@@ -1,16 +1,19 @@
 name: Workflow Matriz
 on:
-  push:
+  workflow_dispatch:
 jobs:
   fluxo-execucao-01:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [16,18,20]
+        platform: ["windows", "ubuntu"]
+    runs-on: "${{ matrix.platform }}-latest"
     steps:
-      - name: "Vai falhar"
-        run: l
-  fluxo-execucao-02:
-    runs-on: ubuntu-latest
-    needs: [fluxo-execucao-01]
-    if: ${{ success() || failure() }}
-    steps:
-      - name: "Execucao com sucesso"
-        run: echo "Execucao de fluxo"
+      - name: "Node Installation"
+        uses: actions/setup-node@v4
+        with:
+          node-version: '${{ matrix.version }}'
+      - name: "Show Node's Version"
+        run: |
+          node --version
+          echo ${{ runner.os }}
