@@ -2,7 +2,11 @@ name: Workflow Concurrency
 run-name: Workflow Concurrency ${{ github.run_number }}
 on:
   workflow_dispatch:
-concurrency: pipeline-aula
+    inputs:
+      chave:
+        type: string
+        description: "Concurrency key"
+concurrency: ${{ inputs.chave }}
 jobs:
   execution-flow:
     runs-on: ubuntu-latest
