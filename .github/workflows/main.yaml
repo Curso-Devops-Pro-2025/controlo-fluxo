@@ -1,10 +1,12 @@
-name: Workflow Schedule
+name: Workflow Concurrency
+run-name: Workflow Concurrency ${{ github.run_number }}
 on:
   workflow_dispatch:
 jobs:
-  teste:
-    permissions: write-all
+  execution-flow:
     runs-on: ubuntu-latest
     steps:
-      - name: Action de teste
-        run: echo "Action apenas executada em master e features"
+    - name: Execution of Test Job
+      run: |
+        sleep: 120;
+        echo "Action executed on job 01"
